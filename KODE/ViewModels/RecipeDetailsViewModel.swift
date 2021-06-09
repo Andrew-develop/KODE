@@ -32,7 +32,9 @@ class RecipeDetailsViewModel {
     func getPictures() {
         isUpdating = true
         let images = recipe.someImage?.allObjects as? [SomeImage]
-        pictureViewModels = images?.map { self.viewModelForPictures(picture: $0.name ?? "") } ?? []
+        if let images = images {
+            pictureViewModels = images.map { self.viewModelForPictures(picture: $0.name ?? "") }
+        }
         isUpdating = false
     }
     
