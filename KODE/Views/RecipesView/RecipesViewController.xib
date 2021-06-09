@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RecipesViewController" customModule="KODE" customModuleProvider="target">
+            <connections>
+                <outlet property="searchBar" destination="RA4-4d-e1i" id="evO-zk-sJH"/>
+                <outlet property="segmentControl" destination="DAd-uz-D7P" id="Uz8-0E-CBa"/>
+                <outlet property="sortLabel" destination="JP7-Md-8LZ" id="dbs-ft-gWP"/>
+                <outlet property="tableView" destination="GRv-Yw-ota" id="OMQ-0K-IFt"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Antipasto..." translatesAutoresizingMaskIntoConstraints="NO" id="RA4-4d-e1i">
+                    <rect key="frame" x="20" y="44" width="374" height="56"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <scopeButtonTitles>
+                        <string>Title</string>
+                        <string>Title</string>
+                    </scopeButtonTitles>
+                </searchBar>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="GRv-Yw-ota">
+                    <rect key="frame" x="20" y="100" width="374" height="816"/>
+                    <color key="backgroundColor" red="1" green="0.98349786480000001" blue="0.91940137070000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                </tableView>
+                <segmentedControl opaque="NO" alpha="0.0" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="DAd-uz-D7P">
+                    <rect key="frame" x="100" y="100" width="294" height="32"/>
+                    <segments>
+                        <segment title="Date"/>
+                        <segment title="Name"/>
+                    </segments>
+                    <connections>
+                        <action selector="segmentedControl:" destination="-1" eventType="valueChanged" id="nmT-G7-xmw"/>
+                    </connections>
+                </segmentedControl>
+                <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sort by:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JP7-Md-8LZ">
+                    <rect key="frame" x="20" y="100" width="72" height="31"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemGray5Color"/>
+            <constraints>
+                <constraint firstItem="JP7-Md-8LZ" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.0345982" id="4jN-PK-qvk"/>
+                <constraint firstItem="GRv-Yw-ota" firstAttribute="top" secondItem="RA4-4d-e1i" secondAttribute="bottom" id="75H-RA-Li2"/>
+                <constraint firstItem="DAd-uz-D7P" firstAttribute="top" secondItem="RA4-4d-e1i" secondAttribute="bottom" id="8va-hm-AKr"/>
+                <constraint firstItem="JP7-Md-8LZ" firstAttribute="top" secondItem="RA4-4d-e1i" secondAttribute="bottom" id="Cy1-7y-moe"/>
+                <constraint firstItem="JP7-Md-8LZ" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.173913" id="GlQ-jR-9ot"/>
+                <constraint firstItem="RA4-4d-e1i" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.0625" id="J8k-ek-vR3"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="GRv-Yw-ota" secondAttribute="trailing" constant="20" id="JBt-9M-hzh"/>
+                <constraint firstItem="RA4-4d-e1i" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.903382" id="Mj1-GL-F9M"/>
+                <constraint firstItem="GRv-Yw-ota" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" constant="54" id="QEW-lZ-rbH"/>
+                <constraint firstItem="DAd-uz-D7P" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.710145" priority="750" id="Qcd-Jb-bNT"/>
+                <constraint firstItem="GRv-Yw-ota" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Ra7-fQ-u9O"/>
+                <constraint firstItem="DAd-uz-D7P" firstAttribute="leading" secondItem="JP7-Md-8LZ" secondAttribute="trailing" constant="8" symbolic="YES" id="W5J-1z-Wwa"/>
+                <constraint firstItem="GRv-Yw-ota" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.903382" priority="750" id="YZn-PH-E1C"/>
+                <constraint firstItem="DAd-uz-D7P" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.0345982" id="b6a-4q-jJ9"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="DAd-uz-D7P" secondAttribute="trailing" constant="20" id="bf4-qa-Wlh"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="top" relation="greaterThanOrEqual" secondItem="RA4-4d-e1i" secondAttribute="top" id="iGs-s5-p0G"/>
+                <constraint firstItem="JP7-Md-8LZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="kNm-sV-bEG"/>
+                <constraint firstItem="GRv-Yw-ota" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.910714" priority="750" id="nPg-1U-iAY"/>
+                <constraint firstItem="RA4-4d-e1i" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="vRP-ZQ-rcQ"/>
+            </constraints>
+            <point key="canvasLocation" x="34.782608695652179" y="92.410714285714278"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

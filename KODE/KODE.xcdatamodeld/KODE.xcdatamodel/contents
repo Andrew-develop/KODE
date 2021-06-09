@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17192" systemVersion="19H2" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="SomeImage" representedClassName="SomeImage" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="someRecipe" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SomeRecipe" inverseName="someImage" inverseEntity="SomeRecipe"/>
+    </entity>
+    <entity name="SomeRecipe" representedClassName="SomeRecipe" syncable="YES">
+        <attribute name="difficulty" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="instructions" optional="YES" attributeType="String"/>
+        <attribute name="lastUpdated" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="recipeDescription" optional="YES" attributeType="String"/>
+        <relationship name="someImage" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SomeImage" inverseName="someRecipe" inverseEntity="SomeImage"/>
+    </entity>
+    <elements>
+        <element name="SomeRecipe" positionX="-238.51171875" positionY="-32.32421875" width="128" height="133"/>
+        <element name="SomeImage" positionX="-57.78125" positionY="52.99609375" width="128" height="73"/>
+    </elements>
+</model>
